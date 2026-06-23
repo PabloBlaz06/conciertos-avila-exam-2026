@@ -4,8 +4,8 @@ import edu.iesam.concierto.presentation.ConcertView;
 
 public class Main {
     public static void main(String[] args) {
-        ConcertView.printConcerts();
-        ConcertView.saveTrains();
-        ConcertView.deleteConcerts("EV-2026-0451");
+        ConcertView.function1();
+        ConcertView.function2();
+        ConcertView.function3();
     }
 }
