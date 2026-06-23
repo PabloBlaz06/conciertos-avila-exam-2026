@@ -28,10 +28,10 @@ public class ConcertsMemLocalDataSource {
     public void save(Concert concert) {
         storage.add(concert);
     }
-/*
-    public void delete(String concert) {
+
+    public void delete(String concerts) {
         storage.removeIf(concert ->
                 Objects.equals(concert.getId(), concert)
         );
-    }*/
+    }
 }

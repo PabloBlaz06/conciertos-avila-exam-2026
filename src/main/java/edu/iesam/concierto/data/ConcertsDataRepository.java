@@ -23,5 +23,10 @@ public class ConcertsDataRepository implements ConcertRepository {
         this.concertsMemLocalDataSource.save(concert);
     }
 
+    @Override
+    public void delete(String concerts) {
+        this.concertsMemLocalDataSource.delete(concerts);
+    }
+
 
 }
