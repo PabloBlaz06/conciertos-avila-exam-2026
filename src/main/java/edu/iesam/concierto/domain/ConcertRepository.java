@@ -5,8 +5,6 @@ import java.util.List;
 public interface ConcertRepository {
     List<Concert> getConcerts();
     void save(Concert concert);
-
-
-    //public static void delete(String concert);
+    void delete(String concert);
 
 }

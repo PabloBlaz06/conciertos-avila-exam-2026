@@ -3,6 +3,7 @@ package edu.iesam.concierto.presentation;
 import edu.iesam.concierto.data.ConcertsDataRepository;
 import edu.iesam.concierto.data.ConcertsMemLocalDataSource;
 import edu.iesam.concierto.domain.Concert;
+import edu.iesam.concierto.domain.DeleteConcertsUseCase;
 import edu.iesam.concierto.domain.GetConcertsUseCase;
 import edu.iesam.concierto.domain.SaveConcertsUseCase;
 
@@ -27,5 +28,12 @@ public class ConcertView {
 
 
         saveConcertsUseCase.execute(newConcert);
+    }
+
+    public static void deleteConcerts(String concertsId) {
+        DeleteConcertsUseCase deleteConcertsUseCase = new DeleteConcertsUseCase(
+                new ConcertsDataRepository(ConcertsMemLocalDataSource.newInstance()));
+
+        deleteConcertsUseCase.execute(concertsId);
     }
 }
