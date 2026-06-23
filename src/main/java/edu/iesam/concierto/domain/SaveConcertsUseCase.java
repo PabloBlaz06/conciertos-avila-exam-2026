@@ -2,16 +2,15 @@ package edu.iesam.concierto.domain;
 
 import java.util.List;
 
-public class SaveConcertsUseCase /*implements ConcertRepository*/{
-/*
+public class SaveConcertsUseCase{
+
     private ConcertRepository concertRepository;
 
     public SaveConcertsUseCase(ConcertRepository concertRepository) {
         this.concertRepository = concertRepository;
     }
 
-    @Override
-    public static void save(Concert concert) {
-        return concertRepository.;
-    }*/
+    public void execute(Concert concert) {
+        concertRepository.save(concert);
+    }
 }

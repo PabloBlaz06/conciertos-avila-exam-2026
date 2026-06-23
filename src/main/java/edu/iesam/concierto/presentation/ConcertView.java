@@ -4,6 +4,7 @@ import edu.iesam.concierto.data.ConcertsDataRepository;
 import edu.iesam.concierto.data.ConcertsMemLocalDataSource;
 import edu.iesam.concierto.domain.Concert;
 import edu.iesam.concierto.domain.GetConcertsUseCase;
+import edu.iesam.concierto.domain.SaveConcertsUseCase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,5 +17,15 @@ public class ConcertView {
 
         List<Concert> concert = getConcertsUseCase.execute();
         System.out.println(concert);
+    }
+
+    public static void saveTrains() {
+        Concert newConcert = new Concert("EV-2026-0451", "MD5-002", "A1", 250);
+
+        SaveConcertsUseCase saveConcertsUseCase = new SaveConcertsUseCase(
+                new ConcertsDataRepository(ConcertsMemLocalDataSource.newInstance()));
+
+
+        saveConcertsUseCase.execute(newConcert);
     }
 }

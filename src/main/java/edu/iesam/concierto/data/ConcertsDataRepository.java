@@ -15,6 +15,13 @@ public class ConcertsDataRepository implements ConcertRepository {
 
     @Override
     public List<Concert> getConcerts() {
-        return concertsMemLocalDataSource.getConcerts();
+        return this.concertsMemLocalDataSource.getConcerts();
     }
+
+    @Override
+    public void save(Concert concert) {
+        this.concertsMemLocalDataSource.save(concert);
+    }
+
+
 }
