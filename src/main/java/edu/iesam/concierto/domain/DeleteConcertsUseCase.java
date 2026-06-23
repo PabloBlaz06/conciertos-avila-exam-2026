@@ -8,7 +8,7 @@ public class DeleteConcertsUseCase {
         this.concertRepository = concertRepository;
     }
 
-    public static void delete(String concert)
+    public void delete(String concert)
 
     */
 }
